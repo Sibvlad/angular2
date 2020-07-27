@@ -18,11 +18,11 @@ export class TableComponent implements OnInit {
   cellpadding = 10;
 
 
-  addTable(person) {
+  addToTable(person:string) {
     this.people.push(person);
   }
 
-  removeTable(index) {
+  removeToTable(index) {
     this.people.splice(index, 1);
   }
 
