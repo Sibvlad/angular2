@@ -1,0 +1,31 @@
+<h1>Персональный список</h1>
+<form #myForm="ngForm" novalidate>
+  <div class="form-group">
+    <label>Имя</label>
+    <input class="form-control"  name="name" [(ngModel)]="name" required>
+  </div>
+  <div class="form-group">
+    <label>Кличка</label>
+    <input  class="form-control" name="title" [(ngModel)]="title" required>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default" [disabled]="myForm.invalid" (click)="addTable()">Добавить</button>
+  </div>
+</form>
+  <table [attr.border]="border" [attr.cellpadding]="cellpadding">
+    <thead>
+    <tr>
+      <th>Имя</th>
+      <th>Кличка</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tr *ngFor="let person of people">
+      <td>{{ person.name }}</td>
+      <td>{{ person.title }}</td>
+      <td>
+        <button class="btn btn-default" (click)="removeTable()">Удалить</button>
+      </td>
+    </tr>
+  </table>
+
