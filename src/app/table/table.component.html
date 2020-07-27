@@ -9,7 +9,7 @@
     <input  class="form-control" name="title" [(ngModel)]="title" required>
   </div>
   <div class="form-group">
-    <button class="btn btn-default" [disabled]="myForm.invalid" (click)="addTable()">Добавить</button>
+    <button class="btn btn-default" [disabled]="myForm.invalid" (click)="addToTable()">Добавить</button>
   </div>
 </form>
   <table [attr.border]="border" [attr.cellpadding]="cellpadding">
@@ -24,7 +24,7 @@
       <td>{{ person.name }}</td>
       <td>{{ person.title }}</td>
       <td>
-        <button class="btn btn-default" (click)="removeTable()">Удалить</button>
+        <button class="btn btn-default" (click)="removeToTable()">Удалить</button>
       </td>
     </tr>
   </table>
